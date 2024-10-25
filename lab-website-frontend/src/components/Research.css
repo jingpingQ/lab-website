@@ -1,0 +1,52 @@
+/* Research.css */
+.research-section {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f0f4f8;
+}
+
+.research-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-weight: bold;
+    color: #1e3a8a;
+}
+
+.research-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.research-item {
+    max-width: 280px;
+    text-align: center;
+    background-color: #2a4365;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    color: #ffffff;
+}
+
+.research-item:hover {
+    transform: translateY(-10px);
+}
+
+.research-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: #63b3ed;
+}
+
+.research-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #63b3ed;
+}
+
+.research-item p {
+    font-size: 1rem;
+    color: #cbd5e0;
+}

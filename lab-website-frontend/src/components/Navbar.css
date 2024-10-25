@@ -1,0 +1,126 @@
+/* Navbar 基本样式 */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px 0;
+    /* 调整顶部和底部的内边距 */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* 导航列表 */
+.navbar-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin: 0;
+    padding: 0;
+}
+
+/* 导航链接样式 */
+.navbar-list li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+/* Project 按钮的下拉菜单样式 */
+.project-dropdown {
+    position: relative;
+}
+
+.project-dropdown a {
+    cursor: pointer;
+}
+
+/* 下拉菜单 */
+.dropdown-menu {
+    display: none;
+    list-style: none;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 8px;
+    padding: 10px;
+    min-width: 150px;
+}
+
+/* 显示下拉菜单 */
+.dropdown-menu.show {
+    display: block;
+}
+
+/* 下拉菜单的选项样式 */
+.dropdown-menu li {
+    padding: 8px 12px;
+    cursor: pointer;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.dropdown-menu li:hover {
+    background-color: #1e3a8a;
+}
+
+/* 汉堡菜单图标样式 */
+.menu-icon {
+    display: none;
+    position: absolute;
+    top: 20px;
+    /* 调整图标的垂直位置 */
+    right: 20px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: white;
+    z-index: 1000;
+    /* 确保在其他元素之上 */
+}
+
+/* 响应式样式 */
+@media screen and (max-width: 980px) {
+    .navbar {
+        padding: 20px 0;
+        /* 在移动端增加导航栏的内边距 */
+    }
+
+    .menu-icon {
+        display: block;
+        /* 确保在移动端显示 */
+    }
+
+    .navbar-list {
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.9);
+        position: fixed;
+        top: 70px;
+        /* 调整导航栏菜单的起始位置 */
+        width: 100%;
+        left: -100%;
+        transition: left 0.5s;
+        z-index: 1000;
+    }
+
+    .navbar-list.active {
+        left: 0;
+        /* 当菜单激活时，将其移到视口内 */
+    }
+
+    .navbar-list li {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .dropdown-menu {
+        position: static;
+        background-color: rgba(0, 0, 0, 0.9);
+        box-shadow: none;
+    }
+}
+
+/* 悬停效果 */
+.navbar-list li a:hover {
+    color: #1e3a8a;
+}

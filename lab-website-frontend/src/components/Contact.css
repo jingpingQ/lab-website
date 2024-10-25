@@ -1,0 +1,37 @@
+/* Contact.css */
+.contact-section {
+    padding: 60px 20px;
+    background-color: #f7f7f7;
+    /* 灰白色背景 */
+    color: #333333;
+    /* 可选：文字颜色为深灰色 */
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.contact-info,
+.contact-details {
+    flex: 1;
+    text-align: center;
+    margin: 20px;
+}
+
+.contact-info h3,
+.contact-details h3 {
+    font-size: 1.5rem;
+    color: #1e3a8a;
+    /* 可选：标题颜色 */
+}
+
+.contact-info p,
+.contact-details p {
+    font-size: 1rem;
+    color: #666666;
+    /* 可选：描述文字颜色 */
+}
